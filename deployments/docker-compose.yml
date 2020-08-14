@@ -1,0 +1,37 @@
+version: "3.8"
+
+services:
+  resumepro:
+    container_name: resumepro
+    build:
+      context: ..
+      dockerfile: ./deployments/Dockerfile
+    environment:
+      - APP_ENV=local
+    stop_signal: SIGINT
+    volumes:
+      - ./..:/go/src/resumepro
+    ports:
+      - 8080:8080
+    networks:
+      - resumepro-net
+
+  tests:
+    build:
+      context: ..
+      dockerfile: ./deployments/Dockerfile
+    working_dir: /var/www/resumepro
+    command: go test -v ./...
+    volumes:
+      - ./..:/var/www/resumepro
+
+  linter:
+    image: golangci/golangci-lint:latest
+    working_dir: /app
+    command: golangci-lint run -v
+    volumes:
+      - ./..:/app
+
+networks:
+  resumepro-net:
+    driver: bridge
