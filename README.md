@@ -1,8 +1,8 @@
 # resumepro
 A Resume Builder based on jsonresume.org schema
 
-## Based on [Standard Go Project Layout](https://github.com/golang-standards/project-layout)
-
+#### Based on [Standard Go Project Layout](https://github.com/golang-standards/project-layout)
+#### Inspirations from [Go-Wagen](https://github.com/groovili/go-wagen) and [Go-Starter](https://github.com/allaboutapps/go-starter)
 
 ## Badges
 
@@ -22,4 +22,3 @@ A Resume Builder based on jsonresume.org schema
 ## Notes
 
 A more opinionated project template with sample/reusable configs, scripts and code is a WIP.
-
