@@ -3,16 +3,16 @@ package main
 import (
 	"flag"
 	"fmt"
-	"github.com/spf13/viper"
-	log "github.com/sirupsen/logrus"
 	router "github.com/go-chi/chi"
+	log "github.com/sirupsen/logrus"
+	"github.com/spf13/viper"
 	"net/http"
 	"os"
 	"os/signal"
-	"syscall"
 	"resumpro/internal/app/resumepro/server/handlers"
 	"resumpro/internal/app/resumepro/server/middleware"
 	"resumpro/internal/app/resumepro/server/routes"
+	"syscall"
 )
 
 const keyENV = "APP_ENV"
@@ -71,7 +71,6 @@ func init() {
 		os.Exit(0)
 	}
 }
-
 
 func main() {
 	host, port := viper.GetString("host"), viper.GetString("port")

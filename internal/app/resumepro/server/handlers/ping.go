@@ -1,19 +1,18 @@
 package handlers
 
 import (
-	"net/http"
-
 	log "github.com/sirupsen/logrus"
+	"net/http"
 )
 
 type Ping struct {
-	l *log.Logger
+	l      *log.Logger
 	semVer string
 }
 
-func NewPing(l *log.Logger, version string) *Ping{
+func NewPing(l *log.Logger, version string) *Ping {
 	return &Ping{
-		l: l,
+		l:      l,
 		semVer: version,
 	}
 }

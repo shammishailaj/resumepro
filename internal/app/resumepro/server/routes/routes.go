@@ -1,15 +1,15 @@
 package routes
 
 import (
-"github.com/go-chi/chi"
-log "github.com/sirupsen/logrus"
-"net/http"
-"strings"
+	"github.com/go-chi/chi"
+	log "github.com/sirupsen/logrus"
+	"net/http"
+	"strings"
 )
 
 type Route struct {
 	Pattern string
-	Method string
+	Method  string
 	Handler http.HandlerFunc
 }
 
@@ -23,7 +23,7 @@ func (r *Route) New(pattern, method string, h http.HandlerFunc) *Route {
 type Routes struct {
 	Routes []*Route
 	Router *chi.Mux
-	Log *log.Logger
+	Log    *log.Logger
 }
 
 func (r *Routes) Init(logger *log.Logger, router *chi.Mux) *Routes {

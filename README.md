@@ -14,11 +14,11 @@ A Resume Builder based on jsonresume.org schema
 
 * Release - It will show the latest release number for your project. Change the github link to point to your project.
 
-[![Go Report Card](https://goreportcard.com/badge/github.com/golang-standards/project-layout?style=flat-square)](https://goreportcard.com/report/github.com/golang-standards/project-layout)
-[![Go Doc](https://img.shields.io/badge/godoc-reference-blue.svg?style=flat-square)](http://godoc.org/github.com/golang-standards/project-layout)
-[![PkgGoDev](https://pkg.go.dev/badge/github.com/golang-standards/project-layout)](https://pkg.go.dev/github.com/golang-standards/project-layout)
-[![Release](https://img.shields.io/github/release/golang-standards/project-layout.svg?style=flat-square)](https://github.com/golang-standards/project-layout/releases/latest)
+[![Go Report Card](https://goreportcard.com/badge/github.com/shammishailaj/resumepro?style=flat-square)](https://goreportcard.com/report/github.com/shammishailaj/resumepro)
+[![Go Doc](https://img.shields.io/badge/godoc-reference-blue.svg?style=flat-square)](http://godoc.org/github.com/shammishailaj/resumepro)
+[![PkgGoDev](https://pkg.go.dev/badge/github.com/golang-standards/project-layout)](https://pkg.go.dev/github.com/shammishailaj/resumepro)
+[![Release](https://img.shields.io/github/release/golang-standards/project-layout.svg?style=flat-square)](https://github.com/shammishailaj/resumepro/releases/latest)
 
 ## Notes
 
-A more opinionated project template with sample/reusable configs, scripts and code is a WIP.
+This is a WIP.

@@ -1,27 +1,26 @@
 package middleware
 
-import(
+import (
 	"bytes"
 	"fmt"
+	log "github.com/sirupsen/logrus"
 	"io/ioutil"
 	"net/http"
-
-	log "github.com/sirupsen/logrus"
 )
 
 type Log struct {
-	l *log.Logger
+	l         *log.Logger
 	printBody bool
 }
 
-func NewLog(l *log.Logger, printBody bool) *Log{
+func NewLog(l *log.Logger, printBody bool) *Log {
 	return &Log{
-		l:l,
+		l:         l,
 		printBody: printBody,
 	}
 }
 
-func (l *Log) Handler (next http.Handler) http.Handler {
+func (l *Log) Handler(next http.Handler) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		entry := fmt.Sprintf("%s %s", r.Method, r.URL.RequestURI())
 		if l.printBody {
